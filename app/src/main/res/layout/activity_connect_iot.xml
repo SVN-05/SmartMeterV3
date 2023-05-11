@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".connect_iot">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="43dp">
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="#00000000"
+            android:drawableStart="@drawable/mback"
+            android:drawableTint="@color/blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:orientation="vertical"
+                android:layout_marginTop="-30dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/signup_lottie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/iot_anim" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="-50dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:fontFamily="@font/aquire_bw"
+                    android:gravity="top|center"
+                    android:text="@string/connect"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aquire_bw"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/cs1"
+            android:layout_marginTop="-30dp"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/aquire_bw"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="4dp"
+            android:text="@string/cs2"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/csubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/blue"
+            android:fontFamily="@font/aquire_bw"
+            android:text="@string/c"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/counttextcolor"
+    tools:context=".Dashboard_Screen">
+
+    <TextView
+        android:id="@+id/d_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aquire_bw"
+        android:text="@string/dashboard"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aquire_bold"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.92"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d_title"
+        app:layout_constraintVertical_bias="0">
+
+        <!--DASHBOARD SCREEN CODE START-->
+        <LinearLayout
+            android:id="@+id/parent_dashboard_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/parent_card_view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/card_bg"
+                android:elevation="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_bg"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/limit"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:elevation="30dp"
+                        android:indeterminateOnly="false"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/circle_percent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0" />
+
+                    <TextView
+                        android:id="@+id/set_percent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aquire_bw"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp"
+                        android:text="@string/initial_valuep"
+                        app:layout_constraintBottom_toBottomOf="@+id/progress_bar"
+                        app:layout_constraintEnd_toEndOf="@+id/progress_bar"
+                        app:layout_constraintStart_toStartOf="@+id/progress_bar"
+                        app:layout_constraintTop_toTopOf="@+id/progress_bar" />
+
+                    <LinearLayout
+                        android:id="@+id/parent_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@+id/progress_bar"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.3">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_bw"
+                            android:text="@string/kwh"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginBottom="3dp"
+                            android:fontFamily="@font/aquire_bw"
+                            android:text="@string/colen"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dashboard_rl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_light"
+                            android:text="@string/initial_value"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_light"
+                            android:text="@string/slash"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/d_limit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_light"
+                            android:text="@string/initial_value"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_light"
+                            android:text="@string/unit"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0"
+                        app:layout_constraintStart_toEndOf="@+id/progress_bar"
+                        app:layout_constraintTop_toBottomOf="@+id/parent_unit"
+                        app:layout_constraintVertical_bias="0.09">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_bw"
+                            android:text="@string/price"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_bw"
+                            android:text="@string/colen"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dashboard_rp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_light"
+                            android:text="@string/initial_value"
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_light"
+                            android:text="@string/slash"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/d_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_light"
+                            android:text="@string/initial_value"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:fontFamily="@font/aquire_light"
+                            android:text="@string/inr"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/aquire_bw"
+                        android:text="@string/note"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aquire_light"
+                        android:text="@string/n_detail"
+                        android:textColor="@color/blue"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/parent_graph_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--DASHBOARD SCREEN CODE END-->
+
+        <!--PROFILE SCREEN CODE START-->
+        <LinearLayout
+            android:id="@+id/parent_profile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/profile_update" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:fontFamily="@font/aquire_bw"
+                    android:gravity="top|center"
+                    android:text="@string/pmodify"
+                    android:textColor="@color/blue"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mphoneno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="false"
+                android:enabled="false"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/blue"
+                app:errorTextColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:startIconDrawable="@drawable/india_icon">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/blue"
+                    android:inputType="number"
+                    android:text="@string/cc"
+                    android:textColor="@color/blue"
+                    android:textCursorDrawable="@color/blue" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/musername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/blue"
+                app:errorTextColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:startIconDrawable="@drawable/user_icon"
+                app:startIconTint="@color/blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/blue"
+                    android:textColor="@color/blue"
+                    android:textCursorDrawable="@color/blue" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:endIconMode="password_toggle"
+                app:endIconTint="@color/blue"
+                app:errorTextColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:startIconDrawable="@drawable/lockicon"
+                app:startIconTint="@color/blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/blue"
+                    android:inputType="numberPassword"
+                    android:textColor="@color/blue"
+                    android:textCursorDrawable="@color/blue" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/blue"
+                android:fontFamily="@font/aquire_bw"
+                android:onClick="profile_modify_func"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <!--PROFILE SCREEN CODE END-->
+
+        <!--ABOUT US SCREEN CODE START-->
+        <LinearLayout
+            android:id="@+id/parent_aboutus_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/sm_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:fontFamily="@font/aquire_bw"
+                    android:gravity="top|center"
+                    android:text="@string/contact"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/phone_icon"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/blue"
+                android:fontFamily="@font/aquire_bw"
+                android:gravity="center"
+                android:text="@string/p_number"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/email_icon"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/blue"
+                android:fontFamily="@font/aquire_bw"
+                android:gravity="center"
+                android:text="@string/aemail"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/location"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/blue"
+                android:fontFamily="@font/aquire_bw"
+                android:gravity="center"
+                android:text="@string/address"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+        <!--ABOUT US SCREEN CODE END-->
+
+        <!--FAQ SCREEN CODE START-->
+        <LinearLayout
+            android:id="@+id/parent_faq_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/title">
+
+                    <TextView
+                        android:id="@+id/view_faq1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/expand"
+                        android:drawablePadding="7.2dp"
+                        android:fontFamily="@font/aquire_bold"
+                        android:onClick="callfaq1"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/faq1"
+                        android:textColor="@color/blue"
+                        android:textSize="18sp"
+                        app:drawableTint="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fvbackground1"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp">
+
+                        <TextView
+                            android:id="@+id/faq_textview1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/aquire_bw"
+                            android:justificationMode="inter_word"
+                            android:padding="20dp"
+                            android:text="@string/tfaq1"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.05" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/fview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/view_faq2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:drawableEnd="@drawable/expand"
+                        android:drawablePadding="7.2dp"
+                        android:fontFamily="@font/aquire_bold"
+                        android:onClick="callfaq2"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/faq2"
+                        android:textColor="@color/blue"
+                        android:textSize="18sp"
+                        app:drawableTint="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_faq1" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fvbackground2"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp">
+
+                        <TextView
+                            android:id="@+id/faq_textview2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/aquire_bw"
+                            android:justificationMode="inter_word"
+                            android:padding="20dp"
+                            android:text="@string/tfaq2"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.05" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/fview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/view_faq3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:drawableEnd="@drawable/expand"
+                        android:drawablePadding="7.2dp"
+                        android:fontFamily="@font/aquire_bold"
+                        android:onClick="callfaq3"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/faq3"
+                        android:textColor="@color/blue"
+                        android:textSize="18sp"
+                        app:drawableTint="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view_faq2" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fvbackground3"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp">
+
+                        <TextView
+                            android:id="@+id/faq_textview3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/aquire_bw"
+                            android:justificationMode="inter_word"
+                            android:padding="20dp"
+                            android:text="@string/tfaq3"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.05" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/fview3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/view_faq4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:drawableEnd="@drawable/expand"
+                        android:drawablePadding="7.2dp"
+                        android:fontFamily="@font/aquire_bold"
+                        android:onClick="callfaq4"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="@string/faq4"
+                        android:textColor="@color/blue"
+                        android:textSize="18sp"
+                        app:drawableTint="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/fvbackground4"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp">
+
+                        <TextView
+                            android:id="@+id/faq_textview4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/aquire_bw"
+                            android:justificationMode="inter_word"
+                            android:padding="20dp"
+                            android:text="@string/tfaq4"
+                            android:textColor="@color/blue"
+                            android:textSize="16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.05" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/fview4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/blue" />
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <!--FAQ SCREEN CODE END-->
+
+        <!--SET LIMIT SCREEN CODE START-->
+        <LinearLayout
+            android:id="@+id/parent_limit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="vertical">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/signup_lottie"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-30dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/set_limit" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:background="@color/blue" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:fontFamily="@font/aquire_bw"
+                        android:gravity="top|center"
+                        android:text="@string/setlimit"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:background="@color/blue" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/aquire_bw"
+                android:text="@string/l1"
+                android:textColor="@color/blue"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ml1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/blue"
+                app:errorTextColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:startIconDrawable="@drawable/limit_icon"
+                app:startIconTint="@color/blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/blue"
+                    android:inputType="number"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/blue"
+                    android:textCursorDrawable="@color/blue" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/minr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/blue"
+                app:errorTextColor="@color/blue"
+                app:hintTextColor="@color/blue"
+                app:startIconDrawable="@drawable/rupee_icon"
+                app:startIconTint="@color/blue">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/blue"
+                    android:inputType="number"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/blue"
+                    android:textCursorDrawable="@color/blue" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/mlimit_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/blue"
+                android:fontFamily="@font/aquire_bw"
+                android:onClick="limit_modify_func"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+        <!--SET LIMIT SCREEN CODE END-->
+
+    </LinearLayout>
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:mbn_backgroundBottomColor="@color/backgroundbottomcolor"
+        app:mbn_circleColor="@color/circlecolor"
+        app:mbn_countTextColor="@color/counttextcolor"
+        app:mbn_defaultIconColor="@color/defaultIconColor"
+        app:mbn_selectedIconColor="@color/selectedIconColor"
+        app:mbn_shadowColor="@color/shadowcolor" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

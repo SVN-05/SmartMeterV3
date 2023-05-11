@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">SMART METER V3</string>
+    <string name="app_title">SMART METER</string>
+    <string name="pnumber">Enter Phone Number</string>
+    <string name="otp">Enter the OTP</string>
+    <string name="title">OTP AUTHENTICATION</string>
+    <string name="submit">SUBMIT</string>
+    <string name="send">SEND</string>
+    <string name="resend">RESEND</string>
+
+    <string name="capital_otp">OTP AUTHENTICATION</string>
+    <string name="live">LIVE TRACKING</string>
+    <string name="modal">MODAL NOTIFICATION</string>
+    <string name="sentence">It is guarded with Fire-Base Verification, and Google sign-in is also available </string>
+    <string name="sentence3">This notification interrupts user, So that the user does not miss the track</string>
+    <string name="sentence2">We will help you to decrease your expenses in electricity using live tracking</string>
+    <string name="skip">SKIP</string>
+    <string name="next">NEXT</string>
+    <string name="lets">Lets Get Started</string>
+
+    <string name="cp">Continue With Phone Number</string>
+    <string name="above_text">Smart Meters Provide New Ways to Track Energy Consumption Data</string>
+    <string name="google">Google</string>
+    <string name="fb">Facebook</string>
+    <string name="terms">By continuing, you agree that you have read and accept our <b>T&amp;C</b> and <b>Privacy Policy</b></string>
+
+    <string name="ep">Enter Phone number for Verification</string>
+    <string name="epd">This number will be used for verifying your number with electricity board. You shall receive SMS with code for verification.</string>
+    <string name="cc">+91</string>
+    <string name="otp1">We sent you a code to verify your mobile number</string>
+    <string name="otp2">Enter your <b>OTP</b> code here</string>
+    <string name="otp3">I "didn't" receive any code</string>
+    <string name="otp4">Resend Code</string>
+    <string name="otp5">Verify Now</string>
+
+    <string name="mpin">LPIN</string>
+    <string name="fmpin">FORGOT LPIN</string>
+
+    <string name="signup">SIGN UP</string>
+    <string name="fname">ENTER FULL NAME</string>
+    <string name="nm">NEW LPIN</string>
+    <string name="cnm">CONFIRM LPIN</string>
+
+    <string name="setlimit">SET ELECTRICITY USAGE NOTIFICATION</string>
+    <string name="l1">Limit</string>
+
+    <string name="connect">Connect Phone with \nSmart Meter</string>
+    <string name="cs1">Connect to the <b>NodeMCU</b> named hotspot network by turning on the WIFI</string>
+    <string name="cs2">You\'ll be directed to a website where you\'ll need to input your account\'s registered phone number and lpin in order to connect to the smart meter and obtain power usage information.</string>
+    <string name="c">CONNECT</string>
+
+    <string name="signin">SIGN IN</string>
+
+    <string name="reset">RESET PASSWORD</string>
+
+    //DASHBOARD SCREEN STRINGS
+    <string name="dashboard">DASHBOARD</string>
+    <string name="initial_value">0</string>
+    <string name="initial_valuep">0%</string>
+    <string name="limit">LIMIT</string>
+    <string name="percent">0%</string>
+    <string name="slash">/</string>
+    <string name="kwh">KWH</string>
+    <string name="colen">:</string>
+    <string name="unit">UNIT</string>
+    <string name="price">PRICE</string>
+    <string name="inr">INR</string>
+    <string name="note">NOTE:</string>
+    <string name="n_detail">Currently the cost of electricity consumption is increased by <b>10INR/UNIT</b></string>
+
+    //FAQ SCREEN STRINGS
+    <string name="faq1">What kind of questions are asked in the quiz?</string>
+    <string name="faq2">How do i create an account?</string>
+    <string name="faq3">I am a registered user, How do i Edit/Manage MY ACCOUNT?</string>
+    <string name="faq4">How can i see my scores of each mode, that i have got</string>
+
+    <string name="tfaq1">In this quiz app there are three types of mode: one is find the name of the flag, and questions in depth about the varieties of country flags</string>
+    <string name="tfaq2">Under the drawer menu there is an option to create an account and also the user will be asked to create account on the app start or if the user does not exists</string>
+    <string name="tfaq3">You can Edit/Modify you account details under the profile section in the drawer menu. You modify the it and click the update button to change the details</string>
+    <string name="tfaq4">You can see your scores under the section score stat with the progress of your scores</string>
+
+    //ABOUT US SCREEN STRINGS
+    <string name="contact">CONTACT DETAILS</string>
+    <string name="p_number">8838014189</string>
+    <string name="aemail">teamnumber13@gmail.com</string>
+    <string name="address">XYZ</string>
+
+    //PROFILE SCREEN STRING
+    <string name="update">UPDATE</string>
+    <string name="pmodify">CHANGE THE DETAILS OF YOUR PROFILE IF YOU WISH</string>
+
+</resources>

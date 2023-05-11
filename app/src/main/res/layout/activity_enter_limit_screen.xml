@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Enter_Limit_Screen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="#00000000"
+            android:drawableStart="@drawable/mback"
+            android:drawableTint="@color/blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/signup_lottie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    android:layout_marginTop="-30dp"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/set_limit" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-30dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:fontFamily="@font/aquire_bw"
+                    android:gravity="top|center"
+                    android:text="@string/setlimit"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/aquire_bw"
+            android:text="@string/l1"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/blue"
+            app:errorTextColor="@color/blue"
+            app:hintTextColor="@color/blue"
+            app:startIconDrawable="@drawable/limit_icon"
+            app:startIconTint="@color/blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/blue"
+                android:inputType="number"
+                android:paddingBottom="20dp"
+                android:textCursorDrawable="@color/blue" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enter_inr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/blue"
+            app:errorTextColor="@color/blue"
+            app:hintTextColor="@color/blue"
+            app:startIconDrawable="@drawable/rupee_icon"
+            app:startIconTint="@color/blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/blue"
+                android:inputType="number"
+                android:paddingBottom="20dp"
+                android:textColor="@color/blue"
+                android:textCursorDrawable="@color/blue" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/esubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/blue"
+            android:fontFamily="@font/aquire_bw"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

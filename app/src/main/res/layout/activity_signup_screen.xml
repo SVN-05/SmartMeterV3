@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="#00000000"
+            android:drawableStart="@drawable/mback"
+            android:drawableTint="@color/blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/signup_lottie"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-100dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/signup_anim" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-50dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/aquire_bw"
+                    android:gravity="center"
+                    android:text="@string/signup"
+                    android:textColor="@color/blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/blue" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:fontFamily="@font/aquire_bw"
+            android:text="@string/fname"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enter_fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/blue"
+            app:errorTextColor="@color/blue"
+            app:hintTextColor="@color/blue"
+            app:startIconDrawable="@drawable/user_icon"
+            app:startIconTint="@color/blue">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/blue"
+                android:textCursorDrawable="@color/blue" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/aquire_bw"
+            android:text="@string/nm"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
+
+
+        <com.chaos.view.PinView
+            android:id="@+id/pass"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:textColor="@color/blue"
+            app:cursorColor="@color/blue"
+            app:hideLineWhenFilled="true"
+            app:itemCount="4"
+            app:itemHeight="50dp"
+            app:itemRadius="5dp"
+            app:itemSpacing="15dp"
+            app:itemWidth="50dp"
+            app:lineColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/aquire_bw"
+            android:text="@string/cnm"
+            android:textColor="@color/blue"
+            android:textSize="18sp" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/cpass"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:textColor="@color/blue"
+            app:cursorColor="@color/blue"
+            app:hideLineWhenFilled="true"
+            app:itemCount="4"
+            app:itemHeight="50dp"
+            app:itemRadius="5dp"
+            app:itemSpacing="15dp"
+            app:itemWidth="50dp"
+            app:lineColor="@color/blue" />
+
+        <Button
+            android:id="@+id/psubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginRight="40dp"
+            android:background="@color/blue"
+            android:fontFamily="@font/aquire_bw"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

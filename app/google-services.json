@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "702898581748",
+    "firebase_url": "https://smart-meter-v3-7b534-default-rtdb.firebaseio.com",
+    "project_id": "smart-meter-v3-7b534",
+    "storage_bucket": "smart-meter-v3-7b534.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702898581748:android:b73064d7e0ad8c95ceaea1",
+        "android_client_info": {
+          "package_name": "com.example.smartmeterv3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702898581748-ltapd8detfrt9eh252va2dkhaisqs4fk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smartmeterv3",
+            "certificate_hash": "52d2532dceda0b2c5f4c300a1e33faf47cc3f0a4"
+          }
+        },
+        {
+          "client_id": "702898581748-s2qetdhrdhomdus4nsgho4s33fdf6kt6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5HisA_mPzCytY4wUkqHXtA3D0DvfX0NA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702898581748-s2qetdhrdhomdus4nsgho4s33fdf6kt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

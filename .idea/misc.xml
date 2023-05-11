@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/drawable/card_bg.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/drawable/circle_percent.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/drawable/colour_cursor.xml" value="0.2671875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/drawable/text_bg.xml" value="0.2708333333333333" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_app_open_anim.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_change_pin.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_connect_iot.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_dashboard_screen.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_dummy.xml" value="0.25052083333333336" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_enter_limit_screen.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_enter_otp.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_enter_phone_number.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_login_screen.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_login_screen2.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_main.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_onboarding_screen.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_otp_screen.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_otp_screen2.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_otp_screen3.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/activity_signup_screen.xml" value="0.25104166666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/slider__lottie.xml" value="0.2546875" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/SMARTMETERV3/app/src/main/res/layout/slider_lottie.xml" value="0.2546875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
